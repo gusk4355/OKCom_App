@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ToolbarTheme"
+    tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/currentTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="현재시간"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/currentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/currentTxt"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="35dp" />
+
+
+        <Button
+            android:id="@+id/refresh_btn"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/currentTime"
+            android:layout_centerHorizontal="true"
+            android:text="새로고침" />
+
+
+        <TextView
+            android:id="@+id/temp_txt"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:background="#F3DDDD"
+            android:layout_below="@+id/refresh_btn"
+            android:layout_marginTop="20dp"
+            android:layout_alignLeft="@+id/refresh_btn" />
+
+        <Button
+            android:id="@+id/temp_btn"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/temp_txt"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@+id/temp_txt"
+            android:onClick="EventTempBtn"
+            android:text="온도" />
+
+
+        <TextView
+            android:id="@+id/humi_txt"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:background="#F3DDDD"
+            android:layout_below="@+id/refresh_btn"
+            android:layout_toRightOf="@+id/temp_txt"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp" />
+
+        <Button
+            android:id="@+id/humi_btn"
+            android:text="습도"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/humi_txt"
+            android:layout_toRightOf="@+id/temp_btn"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:onClick="EventHumiBtn" />
+
+
+        <TextView
+            android:id="@+id/udust_txt"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:background="#F3DDDD"
+            android:layout_below="@+id/temp_btn"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@+id/temp_btn" />
+
+        <Button
+            android:id="@+id/udust_btn"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/udust_txt"
+            android:layout_alignLeft="@+id/udust_txt"
+            android:layout_marginTop="20dp"
+            android:onClick="EventUdustBtn"
+            android:text="초미세먼지" />
+
+        <TextView
+            android:id="@+id/dust_txt"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:background="#F3DDDD"
+            android:layout_below="@+id/humi_btn"
+            android:layout_toRightOf="@id/udust_txt"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp" />
+
+        <Button
+            android:id="@+id/dust_btn"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/dust_txt"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/udust_btn"
+            android:onClick="EventDustBtn"
+            android:text="미세먼지" />
+
+
+</RelativeLayout>
